@@ -24,10 +24,14 @@ The processor is implemented with the following basic blocks.
 
 We also have 4 control signals:
 
-        ctrl_sw: 1 when the operation is sw, it controls when Dmem could be written.
-        ctrl_lw: 1 when the operation is lw, it selects which signal goes into Regfile.
-        ctrl_rtype: 1 when the operation is r-type, it determines which input (data_readregB or sign-extended immediate) should go into data_operandB of alu.
-        ctrl_itype: 1 when the operation is i-type, when it is 1 the opcode of alu should be 00000, rather than coming from a portion of the instruction.
+        ctrl_sw: 
+                1 when the operation is sw, it controls when Dmem could be written.
+        ctrl_lw: 
+                1 when the operation is lw, it selects which signal goes into Regfile.
+        ctrl_rtype:
+                1 when the operation is r-type, it determines which input (data_readregB or sign-extended immediate) should go into data_operandB of alu.
+        ctrl_itype:
+                1 when the operation is i-type, when it is 1 the opcode of alu should be 00000, rather than coming from a portion of the instruction.
         
 We've also devided the instruction properly into the following parts to enhance readability:
 
